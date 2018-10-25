@@ -1,0 +1,12 @@
+﻿@model IEnumerable<CounterChangeFile.Models.Repositories>
+@{
+    ViewBag.Title = "Repository";
+}
+
+<table class="table">
+    <tr><td>Name</td><td>Number</td></tr>
+    @foreach (var item in Model)
+    {
+        <tr><td>@item.Name</td><td>@item.NumberOfChange</td></tr>
+    }
+</table>
