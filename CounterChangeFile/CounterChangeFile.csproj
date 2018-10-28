@@ -5,12 +5,28 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Remove="Migrations\20181024163028_Initial.cs" />
+    <Compile Remove="Migrations\20181024163028_Initial.Designer.cs" />
+    <Compile Remove="Migrations\20181025141111_Initial.cs" />
+    <Compile Remove="Migrations\20181025141111_Initial.Designer.cs" />
+    <Compile Remove="Migrations\20181026125419_Initial.cs" />
+    <Compile Remove="Migrations\20181026125419_Initial.Designer.cs" />
+    <Compile Remove="Migrations\20181026125727_Initial.cs" />
+    <Compile Remove="Migrations\20181026125727_Initial.Designer.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
     <PackageReference Include="LibGit2Sharp" Version="0.25.3" />
     <PackageReference Include="Microsoft.AspNetCore.All" Version="2.0.9" />
+    <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="2.0.4" />
   </ItemGroup>
 
   <ItemGroup>
     <DotNetCliToolReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Tools" Version="2.0.4" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Migrations\" />
   </ItemGroup>
 
 </Project>

@@ -4,11 +4,11 @@ namespace CounterChange
 {
     class Program
     {
-        private const string RepoPath = "D:/Total";
+        private const string RepoPath = "D:/1234/EShop";
         private static void Main(string[] args)
         {
            
-            Test();
+            TestAsync();
             Console.ReadKey();
         }
 
@@ -27,7 +27,7 @@ namespace CounterChange
             }
         }
 
-        private static void Test()
+        private static async System.Threading.Tasks.Task TestAsync()
         {
             var repo = new Repository(RepoPath);
            
@@ -52,7 +52,8 @@ namespace CounterChange
                     }
                 }
 
-                Console.WriteLine("File {0} was changed {1} times.", fileName, i);
+                await writer.WriteLineAsync();
+                //Console.WriteLine("File {0} was changed {1} times.", fileName, i);
             }
         }
     }

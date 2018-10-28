@@ -12,8 +12,6 @@ using Microsoft.AspNetCore.Localization;
 using Microsoft.Extensions.Options;
 using Microsoft.Extensions.Logging;
 using Microsoft.AspNetCore.Http;
-using CounterChangeFile.Models;
-using CounterChangeFile.Services;
 
 namespace CounterChangeFile
 {
@@ -54,7 +52,7 @@ namespace CounterChangeFile
             {
                 routes.MapRoute(
                     name: "default",
-                    template: "{controller=Home}/{action=Index}/{id?}");
+                    template: "{controller=Repos}/{action=Index}/{id?}");
             });
         }
     }

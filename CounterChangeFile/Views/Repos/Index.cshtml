@@ -1,0 +1,41 @@
+﻿@model IEnumerable<CounterChangeFile.Models.Repos>
+
+@{
+    ViewData["Title"] = "Your Repositories";
+}
+
+<h2>Your Repositories</h2>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                Name
+            </th>
+            <th>
+                Path
+            </th>
+            <th>
+              
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    <a asp-controller="Analysis" asp-action="Create" asp-route-Id="@item.Id" asp-route-Path="@item.Path">@item.Name</a>
+                </td>
+                <td>
+                  @item.Path
+                </td>
+                <td>  <a asp-controller="Analysis" asp-action="Index" asp-route-Id="@item.Id"> revise</a></td>
+               
+            </tr>
+        }
+    </tbody>
+</table>

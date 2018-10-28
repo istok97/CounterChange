@@ -7,6 +7,6 @@ namespace CounterChangeFile.Services
 {
     public interface ICounterChange
     {
-        Task CounterChangeFileInLocalrepositiry();
+        Task CounterChangeFileInLocalrepositiry(int RepoId, string Path, int AnalysisId);
     }
 }

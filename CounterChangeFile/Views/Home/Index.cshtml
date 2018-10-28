@@ -1,4 +1,4 @@
-﻿@model IEnumerable<CounterChangeFile.Models.Repositories>
+﻿@model IEnumerable<CounterChangeFile.Models.Repos>
 @{
     ViewBag.Title = "Repository";
 }
@@ -7,6 +7,6 @@
     <tr><td>Name</td><td>Number</td></tr>
     @foreach (var item in Model)
     {
-        <tr><td>@item.Name</td><td>@item.NumberOfChange</td></tr>
+        <tr><td>@item.Name</td></tr>
     }
 </table>
