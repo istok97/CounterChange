@@ -4,11 +4,9 @@
     ViewData["Title"] = "Index";
 }
 
-<h2>Index</h2>
+<h2>Analysis</h2>
 
-<p>
-    <a asp-action="Create">Create New</a>
-</p>
+
 <table class="table">
     <thead>
         <tr>
@@ -19,15 +17,20 @@
         </tr>
     </thead>
     <tbody>
-@foreach (var item in Model) {
-        <tr>
-            <td>
-                @Html.DisplayFor(modelItem => item.Date)
-            </td>
-            <td>
-                <a asp-controller="Files" asp-action="Index" asp-route-Id="@item.Id">revise</a>
-            </td>
-        </tr>
-}
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Date)
+                </td>
+                <td>
+                    <a asp-controller="Files" asp-action="Index" asp-route-Id="@item.Id">revise</a>
+                </td>
+            </tr>
+        }
+       
     </tbody>
 </table>
+<div>
+    <a asp-controller="Repos" asp-action="Index">Back to List</a>
+</div>
