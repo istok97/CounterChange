@@ -19,9 +19,9 @@ namespace CounterChangeFile.Controllers
             return View();
         }
 
-        public IActionResult GitInit(string Path)
+        public IActionResult GitInit(string path)
         {
-             gitInitService.GitInit(Path);
+             gitInitService.GitInit(path);
 
            return RedirectToAction("Index");
         }

@@ -31,6 +31,7 @@ namespace CounterChangeFile
             services.AddDbContext<RepositoryDbContext>(options => options.UseSqlServer(connectionString));
             services.AddTransient<ICounterChange, CounterChange>();
             services.AddTransient<IGitInitService, GitInitServices>();
+            services.AddTransient<IGitCloneServices, GitCloneServices>();
             services.AddMvc();
         }
 

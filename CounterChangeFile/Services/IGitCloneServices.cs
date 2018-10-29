@@ -5,8 +5,8 @@ using System.Threading.Tasks;
 
 namespace CounterChangeFile.Services
 {
-    public interface IGitInitService
+    public interface IGitCloneServices
     {
-         void GitInit(string path);
+        void GitClone(string reference, string path);
     }
 }

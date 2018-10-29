@@ -4,15 +4,14 @@ using System.Linq;
 using System.Threading.Tasks;
 using CounterChangeFile.Services;
 using LibGit2Sharp;
-
 namespace CounterChangeFile.Services
 {
-    public class GitInitServices : IGitInitService
+    public class GitCloneServices : IGitCloneServices
     {
-        public  void  GitInit(string path)
-            
+        public void GitClone(string reference, string path)
+
         {
-            string rootedPath = Repository.Init(@path);
+            Repository.Clone(@reference, @path);
 
         }
     }
