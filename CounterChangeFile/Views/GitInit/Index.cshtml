@@ -1,0 +1,23 @@
+﻿@model IEnumerable<CounterChangeFile.Models.Repos>
+@{
+    ViewBag.Title = "Repository";
+}
+
+<h2>Create</h2>
+
+<h4>Git Init</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form method="post" asp-controller="GitInit" asp-action="GitInit">
+            <div asp-validation-summary="ModelOnly"></div>
+            <div>
+                <input  name="Path" class="form-control" />           
+            </div>
+            <div>
+                <br />
+                <button class="btn btn-info" type="submit"> Start Init</button>
+            </div>
+        </form>
+    </div>
+</div>

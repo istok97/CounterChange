@@ -30,6 +30,7 @@ namespace CounterChangeFile
             string connectionString = "Server=GODYLA;Database=CounterChange;Trusted_Connection=True;";
             services.AddDbContext<RepositoryDbContext>(options => options.UseSqlServer(connectionString));
             services.AddTransient<ICounterChange, CounterChange>();
+            services.AddTransient<IGitInitService, GitInitServices>();
             services.AddMvc();
         }
 
