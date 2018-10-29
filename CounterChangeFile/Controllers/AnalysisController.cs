@@ -49,7 +49,6 @@ namespace CounterChangeFile.Controllers
             {
                 var analysis = new Analysis
                 {
-
                     Date = DateTime.Now,
                     Repos = _context.Repos.SingleOrDefault(x => x.Id == analisisViewModel.Id)
                 };
