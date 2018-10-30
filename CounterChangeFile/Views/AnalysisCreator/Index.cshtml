@@ -1,0 +1,50 @@
+﻿
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<h2>Create</h2>
+
+<h4>Start</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form method="post" asp-controller="AnalysisCreator" asp-action="Create">
+            <div asp-validation-summary="ModelOnly"></div>
+            <div>
+                <span>Input name repo</span>
+                <input name="name" class="form-control" />
+            </div>
+            <div>
+                <span>Input local path</span>
+                <input name="path" class="form-control" />
+            </div>
+            <div>
+                <span>Input reference</span>
+                <input name="reference" class="form-control" />
+            </div>
+            <div>
+                <br />
+                <button class="btn btn-info" value="Start" href="javascript:void(0);" onclick="viewdiv('mydiv');" type="submit"> Start Init</button>
+            </div>
+        </form>
+    </div>
+</div>
+
+<div class="centered" id="mydiv" style="display:none;">
+    <div class="blob-1"></div>
+    <div class="blob-2"></div>
+</div>
+<script type="text/javascript">
+    <!--
+    function viewdiv(id){
+        var el=document.getElementById(id);
+        if(el.style.display=="block"){
+            el.style.display="none";
+        } else {
+            el.style.display="block";
+        }
+    }
+//-->
+</script>
