@@ -13,20 +13,37 @@
         <form asp-action="Create">
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
             <div class="form-group">
-            
+
                 <span>@DateTime.Now </span>
             </div>
-            <div class="form-group" >
-                <input type="submit" value="Start" asp-route-Path="@Model.Path" asp-route-RepoId="@Model.RepoId"  class="btn btn-info" />
+            <input type="submit" value="Start" href="javascript:void(0);" onclick="viewdiv('mydiv');" asp-route-Path="@Model.Path" asp-route-RepoId="@Model.RepoId" class="btn btn-info" />
+   
+            <div class="form-group">
             </div>
-                
         </form>
     </div>
 </div>
-
+<div class="centered" id="mydiv" style="display:none;">
+    <div class="blob-1"></div>
+    <div class="blob-2"></div>
+</div>
 <div>
     <a asp-controller="Repos" asp-action="Index">Back to List</a>
 </div>
+
+<script type="text/javascript">
+    <!--
+    function viewdiv(id){
+        var el=document.getElementById(id);
+        if(el.style.display=="block"){
+            el.style.display="none";
+        } else {
+            el.style.display="block";
+        }
+    }
+//-->
+</script>
+
 
 @section Scripts {
     @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
